@@ -1,3 +1,6 @@
 saludar=function(){
-    console.log("ingresa a saludar")
+    let cmpImagenSaludo;
+    cmpImagenSaludo = document.getElementById("imgSaludo");
+    cmpImagenSaludo.src = "./imagenes/wolverine.gif"; 
+    console.log("ingresa a saludar");
 }
