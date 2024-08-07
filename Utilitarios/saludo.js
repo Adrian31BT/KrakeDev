@@ -6,6 +6,7 @@ saludar = function(){
 
     let mensajeBienvenida = "Bienvenido "+nombre+" "+apellido;
     mostrarTexto("lblResultado", mensajeBienvenida);
+    mostrarimagen("imgSaludo", "./imagenes/deadpool.gif");
 }
 
 recuperarTexto =  function(idComponente){
@@ -26,10 +27,17 @@ recuperarFloat =  function(idComponente){
     let valorCaja = recuperarTexto(idComponente);
     let valorFlotante = parseFloat(valorCaja);
     return valorFlotante;
- }
+}
 
- mostrarTexto = function(idComponente, mensaje){
+
+mostrarimagen = function(idComponente, ruta){
     let componente;
     componente = document.getElementById(idComponente);
-    componente.innerText = mensaje;
- }
+    componente.src = ruta;
+}
+
+mostrarTexto = function(idComponente, mensaje){
+    let componente;
+    componente = document.getElementById(idComponente);
+    componente.innerText = mensaje; 
+}
