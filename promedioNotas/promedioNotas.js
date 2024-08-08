@@ -11,6 +11,11 @@ calcularPromedioNotas = function(){
 
     promedio = calcularPromedio(nota1, nota2, nota3);
     mensaje = "El promedio de nota es: "+promedio;
-
     mostrarTexto("lblMostrarPromedio", mensaje);
+
+    if(promedio >= 7){
+        mostrarImagen("imgPromedio","./imagenes/aprobado.gif");
+    }else{
+        mostrarImagen("imgPromedio","./imagenes/reprobado.gif");
+    }
 }
