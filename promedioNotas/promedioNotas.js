@@ -26,6 +26,5 @@ calcularPromedioNotas = function(){
         mostrarTexto("lblMensaje", "DATOS INCORRECTOS");
         mostrarImagen("imgPromedio","./imagenes/datosincorrectos.gif");
     }
-
     
 }
