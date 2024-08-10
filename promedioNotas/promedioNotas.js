@@ -13,9 +13,19 @@ calcularPromedioNotas = function(){
     mensaje = "El promedio de nota es: "+promedio;
     mostrarTexto("lblMostrarPromedio", mensaje);
 
-    if(promedio >= 7){
-        mostrarImagen("imgPromedio","./imagenes/aprobado.gif");
-    }else{
+    if(promedio > 0 && promedio < 5){
+        mostrarTexto("lblMensaje", "REPROBADO");
         mostrarImagen("imgPromedio","./imagenes/reprobado.gif");
+    }else if(promedio >= 5 && promedio <= 8){
+        mostrarTexto("lblMensaje", "BUEN TRABAJO");
+        mostrarImagen("imgPromedio","./imagenes/buentrabajo.gif");
+    }else if(promedio > 8 && promedio <= 10){
+        mostrarTexto("lblMensaje", "EXCELENTE");
+        mostrarImagen("imgPromedio","./imagenes/excelente.gif");
+    }else{
+        mostrarTexto("lblMensaje", "DATOS INCORRECTOS");
+        mostrarImagen("imgPromedio","./imagenes/datosincorrectos.gif");
     }
+
+    
 }
