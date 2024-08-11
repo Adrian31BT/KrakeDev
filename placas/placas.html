@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="placas.css" />
+        <script src="utilitarios.js"></script>
+        <script src="placas.js"></script>
+        <script src="serviciosPlacas.js"></script>
+        <script src="utilitariosCadenas.js"></script>
+    </head>
+    <body>
+        <div class="principal">
+            <div class="logoEscuela">
+                <img src="./imagenes/logoKrakeDev.png" width="80%" />
+            </div>
+    
+            <div class="contenido">
+                <div class="titulo">
+                    PLACA DE AUTOMOVILES
+                </div>
+    
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        <label>Ingrese Placa: </label>
+                    </div>
+                    <div class="cajas">
+                        <input type="text" class="cajaTexto" id="txtPlaca"/>
+                    </div>
+                </div>
+               
+                <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="VALIDAR"
+                         class="estiloBoton" onclick="validarPlaca()" />
+                    </div>
+                    <div class="contenedorBoton">
+                        <input type="button" value="LIMPIAR"
+                         class="estiloBoton" onclick="limpiar()" />
+                    </div>
+                 </div>
+            </div>
+            <div class="areaResultado">
+                <div class="resultado">
+                    <div class="resultados">
+                        RESULTADO: <span id="lblMensaje"></span>
+                    </div>
+                    <div class="resultados">
+                        <span id="lblErrores"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body> 
