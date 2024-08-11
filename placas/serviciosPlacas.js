@@ -111,5 +111,58 @@ validarEstructura = function(placa){
     }else{
         return error;
     }
+}
 
+obtenerProvincia = function(placa){
+    let c1 = placa.charAt(0);
+    let provincia = null;
+    if(c1 == "A"){
+        provincia = "Azuay";
+    }else if(c1 == "B"){
+        provincia = "Bolivar";
+    }else if(c1 == "U"){
+        provincia = "Cañar";
+    }else if(c1 == "C"){
+        provincia = "Carchi";
+    }else if(c1 == "X"){
+        provincia = "Cotopaxi";
+    }else if(c1 == "H"){
+        provincia = "Chimborazo";
+    }else if(c1 == "O"){
+        provincia = "El Oro";
+    }else if(c1 == "E"){
+        provincia = "Esmeralda";
+    }else if(c1 == "W"){
+        provincia = "Galapagos";
+    }else if(c1 == "G"){
+        provincia = "Guayas";
+    }else if(c1 == "I"){
+        provincia = "Imbabura";
+    }else if(c1 == "L"){
+        provincia = "Loja";
+    }else if(c1 == "R"){
+        provincia = "Los Rios";
+    }else if(c1 == "M"){
+        provincia = "Manabi";
+    }else if(c1 == "V"){
+        provincia = "Morona Santiago";
+    }else if(c1 == "N"){
+        provincia = "Napo";
+    }else if(c1 == "S"){
+        provincia = "Pastaza";
+    }else if(c1 == "P"){
+        provincia = "Pichincha";
+    }else if(c1 == "K"){
+        provincia = "Sucumbios";
+    }else if(c1 == "Q"){
+        provincia = "Orellana";
+    }else if(c1 == "T"){
+        provincia = "Tungurahua";
+    }else if(c1 == "Z"){
+        provincia = "Zamora Chinchipe";
+    }else if(c1 == "Y"){
+        provincia = "Santa Elena";
+    }
+    
+    return provincia;
 }
