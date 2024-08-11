@@ -4,6 +4,7 @@ validarPlaca = function(){
     let placa;
     let provincia;
     let tipo;
+    let pico;
     placa = recuperarTexto("txtPlaca");
     
     erroresEstructura = validarEstructura(placa);
@@ -12,6 +13,7 @@ validarPlaca = function(){
         mostrarTexto("lblErrores", "");
         provincia = obtenerProvincia(placa);
         tipo  = obtenerTipoVehiculo(placa);
+        pico  = obtenerDiaPicoYPlaca(placa);
     }else{
         mensaje = "ESTRUCTURA INCORRECTA";
         mostrarTexto("lblErrores", erroresEstructura);
@@ -28,4 +30,16 @@ validarPlaca = function(){
     }else{
         mostrarTexto("lblTipo", "Vehiculo Incorrecto");
     }
+    
+    mostrarTexto("lblPico", pico);
+}
+
+
+limpiar = function () {
+    mostrarTextoEnCaja("txtPlaca","");
+    mostrarTexto("lblErrores","");
+    mostrarTexto("lblMensaje","");
+    mostrarTexto("lblProvincia","");
+    mostrarTexto("lblTipo","");
+    mostrarTexto("lblPico","");
 }

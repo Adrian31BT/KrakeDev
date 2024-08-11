@@ -184,3 +184,22 @@ obtenerTipoVehiculo =  function(placa){
     }
     return tipo;
 }
+
+obtenerDiaPicoYPlaca = function(placa){
+    let longitud = placa.length;
+    x = longitud - 1;
+    let cu = placa.charAt(x);
+    dia = null;
+    if(cu == 1 || cu == 2){
+        dia = "Lunes";
+    }else if(cu == 3 || cu == 4){
+        dia = "Martes";
+    }else if(cu == 5 || cu == 6){
+        dia = "Miercoles";
+    }else if(cu == 7 || cu == 8){
+        dia = "Jueves";
+    }else if(cu == 0 || cu == 9){
+        dia = "Viernes";
+    }
+    return dia;
+}
