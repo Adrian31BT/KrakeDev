@@ -163,6 +163,24 @@ obtenerProvincia = function(placa){
     }else if(c1 == "Y"){
         provincia = "Santa Elena";
     }
-    
     return provincia;
+}
+
+obtenerTipoVehiculo =  function(placa){
+    let c2 = placa.charAt(1);
+    let tipo = null;
+    if(c2 == "A" || c2=="Z"){
+        tipo = "Vehiculo comercial";
+    }else if(c2 == "E"){
+        tipo = "Vehiculo gubernamental";
+    }else if(c2 == "X"){
+        tipo = "Vehiculo de uso oficial";
+    }else if(c2 == "S"){
+        tipo = "Vehiculo del gobierno provincial";
+    }else if(c2 == "M"){
+        tipo = "Vehiculo municipal";
+    }else{
+        tipo = "Vehiculo Particular";
+    }
+    return tipo;
 }

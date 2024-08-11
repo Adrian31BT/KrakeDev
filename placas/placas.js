@@ -3,6 +3,7 @@ validarPlaca = function(){
     let mensaje;
     let placa;
     let provincia;
+    let tipo;
     placa = recuperarTexto("txtPlaca");
     
     erroresEstructura = validarEstructura(placa);
@@ -10,6 +11,7 @@ validarPlaca = function(){
         mensaje = "ESTRUCTURA VALIDA";
         mostrarTexto("lblErrores", "");
         provincia = obtenerProvincia(placa);
+        tipo  = obtenerTipoVehiculo(placa);
     }else{
         mensaje = "ESTRUCTURA INCORRECTA";
         mostrarTexto("lblErrores", erroresEstructura);
@@ -20,5 +22,10 @@ validarPlaca = function(){
         mostrarTexto("lblProvincia", provincia);
     }else{
         mostrarTexto("lblProvincia", "Provincia Incorrecta");
+    }
+    if(tipo!=null){
+        mostrarTexto("lblTipo", tipo);
+    }else{
+        mostrarTexto("lblTipo", "Vehiculo Incorrecto");
     }
 }
