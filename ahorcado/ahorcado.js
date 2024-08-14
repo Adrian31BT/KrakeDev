@@ -2,8 +2,8 @@
 let palabraSecreta;
 
 //paso 5
-let intentos;
-let coincidencias;
+let intentos = 0;
+let coincidencias = 0;
 let errores = 0;
 
 //paso 1
@@ -25,10 +25,12 @@ guardarPalabra = function(){
     }
     if(validar == false){
         alert("Ingresar una palabra de 5 letras mayusculas");
+        mostrarTextoEnCaja("txtSecreta","");
     }else{
         palabraSecreta = palabra;
     }
     console.log(palabraSecreta);
+    limpiarNuevaPalabra();
 }
 
 //paso 6
@@ -44,20 +46,23 @@ mostrarAhorcado = function(){
 
 //paso 4
 ingresarLetra = function(){
-    intentos = intentos + 1; 
+   
     letra = recuperarTexto("txtLetra");
-    console.log(letra);
+
     if(esMayuscula(letra)){
         validar(letra);
+        intentos = intentos + 1; 
         if(coincidencias == 5){
-            alert("HA GANADO");
+            //paso 7
+            mostrarImagen("ahorcadoImagen","ganador.gif");
         }
-        if(coincidencias == 10){
-            alert("HA PERDIDO");
+        if(intentos == 10){
+            mostrarImagen("ahorcadoImagen","gameOver.gif");
         }
     }else{
         alert("SOLO SE ACEPTAN MAYUSCULAS");
     }
+    mostrarTextoEnCaja("txtLetra","");
 }
 
 
@@ -98,6 +103,18 @@ esMayuscula = function(caracter){
         return true;
     }else{
         return false;
+    }
+}
+
+limpiarNuevaPalabra = function(){
+    intentos = 0;
+    coincidencias = 0;
+    errores = 0;
+    let idDiv="";
+    for(let i=0; i<5; i++){
+        idDiv = "div"+i;
+        mostrarTexto(idDiv,"");
+        mostrarImagen("ahorcadoImagen","");
     }
 }
 
