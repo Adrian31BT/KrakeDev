@@ -1,6 +1,7 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
 let palabraSecreta;
 
+//paso 1
 guardarPalabra = function(){
     let palabra;
     let longitud;
@@ -17,7 +18,6 @@ guardarPalabra = function(){
     }else{
         validar = false;
     }
-
     if(validar == false){
         alert("Ingresar una palabra de 5 letras mayusculas");
     }else{
@@ -26,6 +26,19 @@ guardarPalabra = function(){
     console.log(palabraSecreta);
 }
 
+//paso 4
+ingresarLetra = function(){
+    letra = recuperarTexto("txtLetra");
+    console.log(letra);
+    if(esMayuscula(letra)){
+        validar(letra);
+    }else{
+        alert("SOLO SE ACEPTAN MAYUSCULAS");
+    }
+}
+
+
+//paso 3
 validar = function(letra){
     let letrasEncontrada = 0;
     for(let i=0; i<5; i++){
@@ -37,6 +50,7 @@ validar = function(letra){
     }
 }
 
+//paso 2
 mostrarLetra = function(letra, posicion){
     let idDiv="";
     for(let i=0; i<5; i++){
@@ -47,6 +61,7 @@ mostrarLetra = function(letra, posicion){
     }
 }
 
+//paso 0
 esMayuscula = function(caracter){
     let codigo; 
     codigo = caracter.charCodeAt(0);
