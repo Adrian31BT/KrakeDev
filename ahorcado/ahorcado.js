@@ -26,12 +26,22 @@ guardarPalabra = function(){
     console.log(palabraSecreta);
 }
 
+validar = function(letra){
+    let letrasEncontrada = 0;
+    for(let i=0; i<5; i++){
+        caracter = palabraSecreta.charAt(i);
+        if(caracter == letra){
+            mostrarLetra(letra,i);
+            letrasEncontrada = letrasEncontrada + 1;
+        }
+    }
+}
 
 mostrarLetra = function(letra, posicion){
     let idDiv="";
     for(let i=0; i<5; i++){
         if(posicion == i){
-            idDiv = "div"+i;
+            idDiv = "div"+posicion;
             mostrarTexto(idDiv,letra);
         }
     }
