@@ -1,5 +1,7 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
 let palabraSecreta;
+
+//paso 5
 let intentos;
 let coincidencias;
 let errores = 0;
@@ -28,6 +30,17 @@ guardarPalabra = function(){
     }
     console.log(palabraSecreta);
 }
+
+//paso 6
+mostrarAhorcado = function(){
+    for(let i=1; i<=9; i++){
+        imagen = "Ahorcado_0"+i+".png";
+        if(errores == i){
+            mostrarImagen("ahorcadoImagen",imagen);
+        }
+    }
+}
+
 
 //paso 4
 ingresarLetra = function(){
@@ -61,7 +74,8 @@ validar = function(letra){
     } 
     if(letrasEncontrada == 0){
         errores = errores + 1;
-        alert("LA LETRA NO ES PARTE DE LA PALABRA");    
+        alert("LA LETRA NO ES PARTE DE LA PALABRA");
+        mostrarAhorcado();    
     }
 }
 
@@ -80,10 +94,12 @@ mostrarLetra = function(letra, posicion){
 esMayuscula = function(caracter){
     let codigo; 
     codigo = caracter.charCodeAt(0);
-    if(codigo >= 65 && codigo <= 90){
+    if((codigo >= 65 && codigo <= 90) || codigo == 209){
         return true;
     }else{
         return false;
     }
 }
+
+
 
