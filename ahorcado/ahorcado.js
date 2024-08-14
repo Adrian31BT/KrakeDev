@@ -6,7 +6,7 @@ guardarPalabra = function(){
     let longitud;
     let validar = true;
     palabra = recuperarTexto("txtSecreta");
-    longitud = palabra.length
+    longitud = palabra.length;
     if(longitud == 5){
         for(let i=0; i<longitud; i++){
             caracter = palabra.charAt(i);
@@ -24,6 +24,17 @@ guardarPalabra = function(){
         palabraSecreta = palabra;
     }
     console.log(palabraSecreta);
+}
+
+
+mostrarLetra = function(letra, posicion){
+    let idDiv="";
+    for(let i=0; i<5; i++){
+        if(posicion == i){
+            idDiv = "div"+i;
+            mostrarTexto(idDiv,letra);
+        }
+    }
 }
 
 esMayuscula = function(caracter){
