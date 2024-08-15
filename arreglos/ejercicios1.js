@@ -25,6 +25,7 @@ agregarNota = function(nota){
 }
 
 //Reto 41
+
 calcularPromedio = function(){
     let sumaNotas = 0;
     let promedio = 0;
@@ -35,6 +36,7 @@ calcularPromedio = function(){
 
     return promedio.toFixed(2);
 }
+
 
 ejecutarPromedio = function(){
     let promedio;
