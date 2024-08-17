@@ -242,5 +242,18 @@ mostrarEmpleado =  function(){
     cmpTabla.innerHTML = contenidoTabla;
 }
 
+buscarPorRol = function(){
+    let empleadoEncontrado;
+    let buscarCedula = recuperarTexto("txtBusquedaCedulaRol");
+    empleadoEncontrado = buscarEmpleado(buscarCedula);
+    if(empleadoEncontrado == null){
+        alert("EMPLEADO NO EXISTE");
+    }else{
+        mostrarTexto("infoCedula", empleadoEncontrado.cedula);
+        mostrarTexto("infoNombre", empleadoEncontrado.nombre+" "+empleadoEncontrado.apellido);
+        mostrarTexto("infoSueldo", empleadoEncontrado.sueldo);
+    }
+}
+
 
 
