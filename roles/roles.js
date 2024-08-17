@@ -13,8 +13,6 @@ guardar = function(){
     let valorApellido= recuperarTexto("txtApellido");
     let valorSueldo= recuperarFloat("txtSueldo");
 
-
-
     if(validarCedula(valorCedula) & validarNombre(valorNombre) & validarApellido(valorApellido) & validarSueldo(valorSueldo)){
         if(esNuevo == true){
             objEmpleado = {};
@@ -26,6 +24,11 @@ guardar = function(){
             if(retornoEmpleado == true){
                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
                 mostrarEmpleado();
+                deshabilitarComponente("txtCedula");
+                deshabilitarComponente("txtNombre");
+                deshabilitarComponente("txtApellido");
+                deshabilitarComponente("txtSueldo");
+                deshabilitarComponente("btnGuardar");
             }else{
                 alert("YA EXISTE UN EMPLEDO CON LA CEDULA: "+valorCedula);
             }
