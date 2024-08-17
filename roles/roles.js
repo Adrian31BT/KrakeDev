@@ -61,6 +61,15 @@ ejecutarBusqueda = function(){
     }
 }
 
+limpiar = function(){
+    esNuevo = false;
+    mostrarTextoEnCaja("txtBusquedaCedula","");
+    mostrarTextoEnCaja("txtCedula","");
+    mostrarTextoEnCaja("txtNombre","");
+    mostrarTextoEnCaja("txtApellido","");
+    mostrarTextoEnCaja("txtSueldo","");
+    deshabilitar();
+}
 
 deshabilitar = function(){
     deshabilitarComponente("txtCedula");
