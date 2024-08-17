@@ -71,3 +71,23 @@ esDigito = function(caracter){
         return false;
     }
 }
+
+recuperarTextoDiv = function(idComponente){
+    let componente;
+    let valor;
+    componente=document.getElementById(idComponente);
+    valor=componente.textContent;
+    return valor;
+}
+
+recuperarFloatDiv = function(idComponente){
+    let valor= recuperarTextoDiv(idComponente);
+    let valorFlotanteDiv = parseFloat(valor);
+    return valorFlotanteDiv;
+}
+
+recuperarIntDiv = function(idComponente){
+    let valor= recuperarTextoDiv(idComponente);
+    let valorEnteroDiv = parseInt(valor);
+    return valorEnteroDiv;
+ }
