@@ -327,7 +327,6 @@ agregarRol = function(rol){
     }else{
         alert("Error: El rol ya esta ingresado");
     }
-    console.log(roles);
 }
 
 calcularAporteEmpleador = function(sueldo){
@@ -386,6 +385,7 @@ mostrarTotales = function(){
     let totalempleado = 0;
     let totalEmpleador = 0;
     let totalAPagar = 0;
+    let totalNomina = 0;
     let longitudRol = roles.length;
     let objRol;
     for(let i=0; i<longitudRol; i++){
@@ -394,9 +394,11 @@ mostrarTotales = function(){
         totalEmpleador =  totalEmpleador + parseFloat(objRol.aporteEmpleador);
         totalAPagar = totalAPagar + parseFloat(objRol.valorAPagar);
     }
+    totalNomina = totalempleado + totalEmpleador + totalAPagar;
     mostrarTexto("infoTotalPago",totalAPagar);
     mostrarTexto("infoAporteEmpresa",totalEmpleador);
     mostrarTexto("infoAporteEmpleado",totalempleado);
+    mostrarTexto("infoTotalNomina",totalNomina);
 }
 
 
