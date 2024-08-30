@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="orden.css" />
+        <script src="utilitarios.js"></script>
+        <script src="orden.js"></script>
+    </head>
+    <body>
+        <div class="principal">
+            <div class="logoEscuela">
+                <img src="./imagenes/logoKrakeDev.png" width="80%" />
+            </div>
+    
+            <div class="contenido">
+                <div class="titulo">
+                    ORDEN
+                </div>
+    
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        NOMBRE
+                    </div>
+                    <div class="cajas">
+                        <input type="text" class="cajaTexto" id="txtNombre"/>
+                        <div class="error" id="lblErrorNombre"></div>
+                    </div>
+                </div>
+               
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        EDAD
+                    </div>
+                    <div class="cajas">
+                        <input type="text" class="cajaTexto" id="txtEdad"/>
+                        <div class="error" id="lblErrorEdad"></div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="GUARDAR"
+                         class="estiloBoton" onclick="agregarPersona()" />
+                    </div>
+                 </div>
+            </div>
+            <div class="areaResultado">
+                <div class="resultado">
+                    <div class="resultados">
+                        SUBTOTAL: <span id="lblSubtotal">0.0</span>
+                    </div>
+                    <div class="resultados">
+                        DESCUENTO: <span id="lblDescuento">0.0</span>
+                    </div>
+                    <div class="resultados">
+                        IVA 12%: <span id="lblValorIVA">0.0</span>
+                    </div>
+                    <div class="resultados">
+                        TOTAL: <span id="lblTotal">0.0</span>
+                    </div>
+                    <div class="resultados">
+                        <p id="lblResumen"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body> 
+</html>
+
+
+
