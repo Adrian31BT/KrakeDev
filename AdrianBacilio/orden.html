@@ -5,7 +5,7 @@
         <script src="utilitarios.js"></script>
         <script src="orden.js"></script>
     </head>
-    <body>
+    <body onload="mostrarPersonas()">
         <div class="principal">
             <div class="logoEscuela">
                 <img src="./imagenes/logoKrakeDev.png" width="80%" />
@@ -45,19 +45,7 @@
             <div class="areaResultado">
                 <div class="resultado">
                     <div class="resultados">
-                        SUBTOTAL: <span id="lblSubtotal">0.0</span>
-                    </div>
-                    <div class="resultados">
-                        DESCUENTO: <span id="lblDescuento">0.0</span>
-                    </div>
-                    <div class="resultados">
-                        IVA 12%: <span id="lblValorIVA">0.0</span>
-                    </div>
-                    <div class="resultados">
-                        TOTAL: <span id="lblTotal">0.0</span>
-                    </div>
-                    <div class="resultados">
-                        <p id="lblResumen"></p>
+                        <div id="tablaPersonas"></div>
                     </div>
                 </div>
             </div>

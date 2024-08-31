@@ -104,7 +104,6 @@ body{
     width: 100%;
 }
 .resultado{
-
     display: inline-block;
     flex:1;
     flex-direction: row;
@@ -126,4 +125,22 @@ body{
 }
 .lblResumen{
     font-size: 12px;
+}
+
+table {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    width: 25%;
+    vertical-align: top;
+    border: 1px solid #000;
+}
+
+th {
+    background-color: #56af59;
 }
