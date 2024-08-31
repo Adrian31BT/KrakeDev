@@ -41,11 +41,29 @@
                          class="estiloBoton" onclick="agregarPersona()" />
                     </div>
                  </div>
+                 <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="ENCONTRAR MAYOR"
+                         class="estiloBoton" onclick="determinarMayor()" />
+                    </div>
+                 </div>
+                 <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="ENCONTRAR MENOR"
+                         class="estiloBoton" onclick="determinarMenor()" />
+                    </div>
+                 </div>
             </div>
             <div class="areaResultado">
                 <div class="resultado">
                     <div class="resultados">
                         <div id="tablaPersonas"></div>
+                    </div>
+                    <div class="resultados">
+                        PERSONA MAYOR: <span id="lblMayor"></span>
+                    </div>
+                    <div class="resultados">
+                        PERSONA MENOR: <span id="lblMenor"></span>
                     </div>
                 </div>
             </div>

@@ -51,3 +51,46 @@ mostrarPersonas = function(){
     contenidoTabla+="</table>"
     cmpTabla.innerHTML = contenidoTabla;
 }
+
+encontrarMayor = function(){
+    let personaMayor = personas[0];
+    let elementoPersona;
+    let tamanioPersonas = personas.length;
+    
+    for(let i=1; i<tamanioPersonas; i++){
+        elementoPersona = personas[i];
+        if(elementoPersona.edad > personaMayor.edad){
+            personaMayor = elementoPersona;
+        }
+        console.log(personas[i].nombre+" "+personas[i].edad);
+    }
+    return personaMayor;
+}
+
+encontrarMenor = function(){
+    let personaMenor = personas[0];
+    let elementoPersona;
+    let tamanioPersonas = personas.length;
+    
+    for(let i=1; i<tamanioPersonas; i++){
+        elementoPersona = personas[i];
+        if(elementoPersona.edad < personaMenor.edad){
+            personaMenor = elementoPersona;
+        }
+        console.log(personas[i].nombre+" "+personas[i].edad);
+    }
+    return personaMenor;
+}
+
+
+determinarMayor = function(){
+    let mayor;
+    mayor = encontrarMayor();
+    mostrarTexto("lblMayor", mayor.nombre+" - "+mayor.edad);
+}
+
+determinarMenor = function(){
+    let menor;
+    menor = encontrarMenor();
+    mostrarTexto("lblMenor", menor.nombre+" - "+menor.edad);
+}

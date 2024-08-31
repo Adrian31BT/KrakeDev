@@ -51,7 +51,7 @@ body{
     text-align: center;
     font-size: 16px;
     border-radius: 5px;
-    width: 150px;
+    width: 200px;
 }
 .estiloBoton:hover {
     background-color:white; 
@@ -81,6 +81,7 @@ body{
     flex:1;
     justify-content: center;
 }
+
 .cajaTexto{
     border-radius: 4px;
     border-color: #4CAF50;
